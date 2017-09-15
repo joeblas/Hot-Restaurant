@@ -22,19 +22,19 @@ app.use(express.static(path.join(__dirname, 'public')))
     {
         customerName : 'Tyler',
         phoneNumber : '3072728842',
-        cusomterEmail : 'tnegro@gmail.com',
+        customerEmail : 'tnegro@gmail.com',
         customerID : 1
     },
     {
         customerName : 'Kundan',
         phoneNumber : '555555555',
-        cusomterEmail : 'kundan@gmail.com',
+        customerEmail : 'kundan@gmail.com',
         customerID : 2
     },
     {
         customerName : 'Joe',
         phoneNumber : '5550009999',
-        cusomterEmail : 'joe@gmail.com',
+        customerEmail : 'joe@gmail.com',
         customerID : 3
     }
     
@@ -57,6 +57,20 @@ app.get('/api/tables',function(req, res){
     return res.json(reservations)
 })
 
+app.post('/api/new', function(req, res){
+    var newReservation = req.body;
+    console.log(newReservation);
+  
+    reservations.push(newReservation);
+  
+    res.json(newReservation);
+    console.log(reservations)
+})
+
 app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+    console.log("App listening on PORT " + PORT);
 });
+
+// function determinRes(reservation){
+//     if(reservation.length >)
+// }
