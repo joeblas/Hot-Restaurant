@@ -1,10 +1,21 @@
 $(document).ready(function(){
 
-		console.log("Hello!")
-		
-	$.get('/api/tables', function(data){
-		console.log(data);
-	})
+
+
+	console.log("Hello!")
+	
+$.get('/api/tables', function(data){
+	for (var i = 0; i < data.length; i++){
+	var person = data[i].customerName;
+	console.log(person);
+
+	$("#tableBody").append("<tr>" + "<td>" + person + "</td>" + "</tr>");
+
+	}
+
+	
+})
+
 
 	$('body').on('click', function(){
 		console.log('stuff')
