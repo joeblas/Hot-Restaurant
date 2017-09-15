@@ -57,6 +57,8 @@ app.get('/api/tables',function(req, res){
     return res.json(reservations)
 })
 
+app.post('/api/new', function())
+
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
