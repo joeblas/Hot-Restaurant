@@ -18,7 +18,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-var reservations = [
+ var reservations = [
     {
         customerName : 'Tyler',
         phoneNumber : '3072728842',
