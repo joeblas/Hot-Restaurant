@@ -19,15 +19,16 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/',function(req, res){
-    res.sendFile(path.join(__dirname,'public/index.html'))
+	res.sendFile(path.join(__dirname,'public/views/index.html'));
+	
 })
 
 app.get('/make-reservation',function(req, res){
-    res.sendFile(path.join(__dirname, 'public/make.html'))
+    res.sendFile(path.join(__dirname, 'public/views/make.html'))
 })
 
 app.get('/tables',function(req, res){
-    res.sendFile(path.join(__dirname, 'public/view.html'))
+    res.sendFile(path.join(__dirname, 'public/views/view.html'))
 })
 
 app.listen(PORT, function() {
