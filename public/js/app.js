@@ -1,8 +1,13 @@
-$(document).on("ready", function(){
+$(document).ready(function(){
 
-	console.log('test');
+	console.log("Hello!")
+	
 $.get('/api/tables', function(data){
 	console.log(data);
+})
+
+$('body').on('click', function(){
+	console.log('stuff')
 })
 
 })
